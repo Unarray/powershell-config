@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../.starship"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "\"Hack Nerd Font Mono\", \"JetBrainsMono Nerd Font Mono\", Consolas, 'Courier New', monospace"
+	}
+}

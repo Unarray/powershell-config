@@ -1,0 +1,47 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change the default prompt format
+# ╴
+format = """\
+[╭─](238) $os$time$username$hostname$directory$git_branch$git_status$all\
+[╰╴](238)$character \
+"""
+
+[os]
+disabled=false
+
+[os.symbols]
+Windows = ' '
+
+[character]
+format = '$symbol[╶](238)'
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
+
+[time]
+format = '[\[[$time](white)\]](238) '
+disabled = false
+
+[username]
+format = '[$user]($style) '
+show_always = true
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style) '
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+truncate_to_repo = false
+truncation_length = 0
+
+[git_branch]
+format = 'on [$symbol $branch(:$remote_branch)]($style) '
+symbol = ''
+
+[git_status]
+format = '([\[$untracked $modified $deleted\]]($style)) '
+untracked = '[ +$count](bold green)'
+modified = '[~$count](bold yellow)'
+deleted = '[-$count ](bold red)'
+style = '238'
